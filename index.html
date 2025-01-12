@@ -24,9 +24,7 @@
             background-color: #0f0f0f;
             text-align: center;
         }
-        h1{
-            font-size: 5em;
-        }
+        
         button {
             font-family: "Honk";
             padding: 10px 20px;
@@ -60,13 +58,33 @@
         }
 
         /* Media queries para diseño responsive */
-        @media (min-width: 768px) {
+        @media (max-width: 1023px) {
+            .videos {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            h1{
+            font-size: 4em;
+            }
+            .videos video.vid{
+                max-width: 300px;
+            }
+            .videos video.epk{
+                max-width: 200px;
+            }
+            
+        }
+        @media (min-width: 1024px) {
             .videos {
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
             }
-
+            h1{
+            font-size: 5em;
+            margin-top: -5%;
+            }
             .videos video.vid{
                 max-width: 30%;
             }
